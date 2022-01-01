@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/header :: common-header"></head>
+
+
+<body>
+
+ <div th:replace="common/headerAdmin :: navbar"></div>
+
+  <div class="product">
+    <div class="image-product">
+      <img src="image/nike-air-zoom-sup.png" alt="">
+    </div>
+
+    <div class="product-information">
+      <h1 class="name-product">NIKE AIR ZOOM SUPERREP</h1>
+      <p class="description">The Nike Air Zoom SuperRep 2 is designed for circuit training, HIIT, sprints and other fast-paced exercise. Layers of support team up with Zoom Air cushioning to keep your foot locked in and comfortable as you lunge, jump
+        and push your way through every rep. A roomier design around the toes lets you get the perfect fit.</p>
+        <form action="/action_page.php">
+    <label for="sizes">Choose size:</label>
+    <select name="sizes" id="sizes">
+      <option value="38">38</option>
+      <option value="39">39</option>
+      <option value="40">40</option>
+      <option value="41">41</option>
+    </select>
+    <br><br>
+
+    <h2 class="price">989,00DHS</h2>
+    <input type="submit" value="Add to cart">
+  </form>
+    </div>
+
+  </div>
+
+
+
+	
+  <div th:replace="common/header :: chat"></div>
+
+  <div th:replace="common/header :: body-bottom"></div>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/headerAdmin :: common-headerAdmin"></head>
+
+
+<body>
+
+  <div th:replace="common/headerAdmin :: navbar"></div>
+
+  <form class="update-product" th:action="@{/addProduct}" method="post" enctype="multipart/form-data">
+    <div class="product">
+      <div class="image-add">
+      <label class="image-input" for="shoesImage">
+       <img id="uploaded-img" src="image/add.png" alt="">
+      </label>
+      
+      <input id=shoesImage type="file" name="shoesImage" onchange="previewFile();" th:value="${shoes.shoesImage}"/>
+       
+      </div>
+
+      <div class="product-information">
+        <h1 class="name-product"><input type="text" name="name" id="name" th:value="${shoes.name}" required placeholder="NAME OF PRODUCT"></h1>
+        <p class="description">
+          <textarea name="description" id="description" th:value="${shoes.description}" required placeholder="Enter a description for the product"></textarea>
+        </p>
+
+        <input list="sizes" name="size" id="size" th:value="${shoes.size}" required placeholder="Add shoe sizes">
+        <datalist id="sizes">
+          <option value="36">
+          <option value="37">
+          <option value="38">
+          <option value="39">
+          <option value="40">
+        </datalist>
+        <br><br>
+
+
+		<input list="category" name="category" id="category" th:value="${shoes.category}" required placeholder="Add category">
+        <datalist id="category">
+          <option value="Basketball shoes">
+          <option value="Running shoes">
+          <option value="Skate shoes">
+        </datalist>
+		
+		
+		
+		 <h2 class="price"><input type="text" name="inStockNumber" id="inStockNumber" th:value="${shoes.inStockNumber}" placeholder="Number available in stock"></h2>
+		
+        <h2 class="price"><input type="text" name="price" id="price" th:value="${shoes.price}"  placeholder="ADD PRICE"></h2>
+        
+        
+       
+        
+        
+        
+        <button type="submit">Submit</button>
+
+      </div>
+
+    </div>
+
+  </form>
+
+
+
+
+
+
+  <div th:replace="common/headerAdmin :: body-bottom"></div>
+
+
+
+</body>
+
+
+</html>

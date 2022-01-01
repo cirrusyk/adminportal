@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/headerAdmin :: common-headerAdmin"></head>
+
+
+<body>
+
+  <div th:replace="common/headerAdmin :: navbar"></div>
+
+  <div class="main" >
+    <div class="title-manage">
+    
+    <div class="manage-products">
+    <h1 class="title-section"><a href="#new">Manage Products</a></h1>
+        <a href="addProduct" style="align-self: center;
+    margin: 0 20px;"
+    
+        ><img src="image/add.png" alt=""></a>
+    </div>
+  
+    
+
+        
+    </div>
+
+
+    <div class="row-first">
+      <div class="row-section" th:with="var=${9}" >
+           
+        
+        <div class="column"  th:each="shoes,iterStat : ${shoesList}"  >
+        
+        
+       <!-- th:each="i: ${#numbers.sequence(0, 2)}" th:with="product=${products[i]}" --> 
+        
+          <div class="image-product">
+            <a th:href="@{/shoesInfo(id=${shoes.id})}"><img th:src="@{${'/image/shoes/' + shoes.id  + '.png'}}" style="width:100%"></a>
+          </div>
+
+          <div class="info">
+              <a th:href="@{/shoesInfo(id=${shoes.id})}"><h2 class="title-product" th:text="${#strings.toUpperCase(shoes.name)}"></h2></a>
+    		  <a th:href="@{/shoesInfo(id=${shoes.id})}"><h2 class="price-product" th:text="${#numbers.formatDecimal(shoes.price, 0, 2, 'POINT')} + DHS"></h2></a>
+          </div> 
+                 
+      </div>
+      
+      
+      
+    </div>
+
+
+
+    
+      
+    </div>
+
+    
+    
+
+  </div>
+  
+   
+    <div class="pages" id="pagination">
+    
+    </div>
+  
+ 
+
+
+
+	
+
+
+
+
+
+
+
+  <div th:replace="common/headerAdmin :: body-bottom"></div>
+  
+  
+  <script th:inline="javascript">
+  
+  /*<![CDATA[*/
+	  
+	  
+	 
+	  
+
+  $(function () {
+	  var pageElements = 9;
+      window.pagObj = $('#pagination').twbsPagination({
+          totalPages: 35,
+          visiblePages: 3,
+          first: false,
+          last: false,
+          prev:"&#10094;",
+          next: "&#10095;",
+          prevClass: "previous",
+          nextClass:"nextpage",
+     
+          
+          onPageClick: function (event, page) {
+              console.info(page + ' (from options)');
+             
+          }
+      }).on('page', function (event, page) {
+          console.info(page + ' (from event listening)');
+          pageElements = pageElements * page;
+          console.info(pageElements);
+      });
+  });
+  
+  /*]]>*/
+  
+  </script>
+
+
+
+</body>
+
+
+</html>

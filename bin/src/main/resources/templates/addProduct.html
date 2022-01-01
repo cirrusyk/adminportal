@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/headerAdmin :: common-headerAdmin"></head>
+
+
+<body>
+
+  <div th:replace="common/headerAdmin :: navbar"></div>
+
+  <form class="add-product" action="index.html" method="post">
+    <div class="product">
+      <div class="image-add">
+        <img src="image/add.png" alt="">
+      </div>
+
+      <div class="product-information">
+        <h1 class="name-product"><input type="text" name="name-product" value="NAME OF PRODUCT"></h1>
+        <p class="description">
+          <input type="text" name="description" value="Enter a description for the product">
+        </p>
+
+        <input list="sizes" name="size" id="size" placeholder="Add shoe sizes">
+        <datalist id="sizes">
+          <option value="36">
+          <option value="37">
+          <option value="38">
+          <option value="39">
+          <option value="40">
+        </datalist>
+        <br><br>
+
+        <h2 class="price"><input type="text" name="price" value="ADD PRICE"></h2>
+        <input type="submit" value="Submit">
+
+      </div>
+
+    </div>
+
+  </form>
+
+
+
+
+
+
+  <div th:replace="common/headerAdmin :: body-bottom"></div>
+
+
+
+</body>
+
+
+</html>

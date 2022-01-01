@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/header :: common-header"></head>
+
+
+<body>
+
+  <div th:replace="common/headerAdmin :: navbar"></div>
+
+  <div class="contact">
+    <h1>CUSTOMER SUPPORT</h1>
+    <form action="">
+      <label for="mail">Email:</label>
+      <input type="text" id="mail" name="mail">
+      <label for="message">Message:</label>
+      <textarea type="text" id="message" name="message"></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+
+
+  </div>
+
+
+  <div th:replace="common/header :: body-bottom"></div>
+
+
+
+</body>
+
+
+</html>

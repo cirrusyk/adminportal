@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/headerAdmin :: common-headerAdmin"></head>
+
+
+<body>
+
+  <div th:replace="common/headerAdmin :: navbar"></div>
+
+  <div class="profile">
+    <div class="menu">
+
+      <a class="active" href="manageUsers">
+        <h2 class="profile-option">Users</h2>
+      </a>
+      <a class="option unactive" href="manageOrders">
+        <h2 class="track-option">Orders</h2>
+      </a>
+      <a class="option unactive" href="manageProducts">
+        <h2 class="catalog-option">Products</h2>
+      </a>
+
+      <a class="logout" th:href="@{/logout}">
+        <h2 class="logout-option-admin">Log out</h2>
+      </a>
+    </div>
+
+    <div class="main">
+      <h1 class="orders">Manage Users</h1>
+      <div class="container-manageUser">
+
+        <div class="manageUser-details">
+          <div class="order-ID" style="flex-grow: 1;">
+            <h2 class="title-order">Full name</h2>
+            <h3 class="info-order">John Smith</h3>
+          </div>
+          <div class="order-products" style="flex-grow:1;">
+            <h2 class="title-order">ID</h2>
+            <h3 class="info-order">142</h3>
+          </div>
+          <div class="total-order" style="flex-grow:3">
+            <h2 class="title-order">Address</h2>
+            <h3 class="info-order">Address exemple</h3>
+          </div>
+          <div class="status-order" style="flex-grow:3">
+            <h2 class="title-order">E-mail</h2>
+            <h3 class="info-order">email@gmail.com</h3>
+          </div>
+        </div>
+
+        <a href="#" class="delete-user"><img src="image/x-circle.png" alt=""></a>
+
+
+      </div>
+
+      <div class="container-manageUser">
+
+        <div class="manageUser-details">
+          <div class="order-ID" style="flex-grow: 1;">
+            <h2 class="title-order">Full name</h2>
+            <h3 class="info-order">John Smith</h3>
+          </div>
+          <div class="order-products" style="flex-grow:1;">
+            <h2 class="title-order">ID</h2>
+            <h3 class="info-order">142</h3>
+          </div>
+          <div class="total-order" style="flex-grow:3">
+            <h2 class="title-order">Address</h2>
+            <h3 class="info-order">Address exemple</h3>
+          </div>
+          <div class="status-order" style="flex-grow:3">
+            <h2 class="title-order">E-mail</h2>
+            <h3 class="info-order">email@gmail.com</h3>
+          </div>
+        </div>
+
+        <a href="#" class="delete-user"><img src="image/x-circle.png" alt=""></a>
+
+
+      </div>
+
+      <div class="container-manageUser">
+
+        <div class="manageUser-details">
+          <div class="order-ID" style="flex-grow: 1;">
+            <h2 class="title-order">Full name</h2>
+            <h3 class="info-order">John Smith</h3>
+          </div>
+          <div class="order-products" style="flex-grow:1;">
+            <h2 class="title-order">ID</h2>
+            <h3 class="info-order">142</h3>
+          </div>
+          <div class="total-order" style="flex-grow:3">
+            <h2 class="title-order">Address</h2>
+            <h3 class="info-order">Address exemple</h3>
+          </div>
+          <div class="status-order" style="flex-grow:3">
+            <h2 class="title-order">E-mail</h2>
+            <h3 class="info-order">email@gmail.com</h3>
+          </div>
+        </div>
+
+        <a href="#" class="delete-user"><img src="image/x-circle.png" alt=""></a>
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+  <div th:replace="common/headerAdmin :: body-bottom"></div>
+
+
+
+</body>
+
+
+</html>

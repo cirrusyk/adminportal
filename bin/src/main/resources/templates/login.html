@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head th:replace="common/header :: common-header"></head>
+
+
+<body>
+
+  <div th:replace="common/headerAdmin :: navbar"></div>
+
+
+  <div class="login-regis">
+
+    <div class="form-login">
+    
+    <div class="bg-danger" th:if="$(param.error)">Invalid username and password</div>
+     <div class="bg-danger" th:if="$(param.logout)">You have been logged out</div>
+    
+      <h1>LOGIN</h1>
+      <form  method="post" th:action="@{/login}" th:object="${user}" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required="required" autofocus="autofocus">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required="required">
+
+        <button type="submit" name="login">Login</button>
+      </form>
+
+
+    </div>
+
+    
+  </div>
+
+
+
+  <div th:replace="common/header :: body-bottom"></div>
+
+
+
+</body>
+
+
+</html>
